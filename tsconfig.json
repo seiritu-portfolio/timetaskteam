@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    // * customization
+    "baseUrl": ".",
+    "paths": {
+      "@svg/*": ["assets/svg/*"],
+      "@image/*": ["assets/images/*"],
+      "@component/*": ["components/*"],
+      "@util/*": ["utils/*"],
+      "@service/*": ["services/*"],
+      "@model/*": ["models/*"],
+      "@store/*": ["store/*"],
+      "@style/*": ["styles/*"]
+    }
+    // * end customization
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"],
+  "types": ["google-one-tap", "google.accounts"]
+}

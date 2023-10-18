@@ -1,0 +1,700 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+/* * font face */
+@font-face {
+  font-family: 'NotaSansCJKjp';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('/assets/font/NotoSansCJKjp/tgNotoSansCJKjp-Regular.ttf') format('ttf');
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, NotaSansCJKjp, sans-serif;
+  scroll-behavior: unset !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slick-slider .slick-prev {
+  display: none !important;
+}
+
+.slick-slider .slick-next {
+  display: none !important;
+}
+
+.slick-slider .slick-dots {
+  position: absolute;
+  bottom: 120px;
+  left: 40px;
+  display: flex !important;
+  flex-direction: row;
+  z-index: 50;
+}
+
+.slick-slider .slick-dots li button {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.3;
+}
+
+.slick-slider .slick-dots li button:before {
+  display: none;
+}
+
+.slick-slider .slick-dots li.slick-active button {
+  opacity: 1;
+}
+
+/* .app-store--logo {
+} */
+
+/* modals */
+.react-responsive-modal-modal {
+  border: 0.5px solid #eaeaea;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
+  overflow: visible !important;
+}
+
+.modal-sm-size {
+  padding: 0 !important;
+  width: 432px;
+}
+
+.tfa-modal {
+  width: 432px;
+}
+/* settings modal */
+.react-responsive-modal-modal.settings-modal {
+  padding: 0;
+  width: 880px;
+  max-width: unset;
+  height: 630px;
+  display: flex;
+  overflow: visible !important;
+}
+
+.settings-modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* settings submodal password reset */
+.modal-md-size {
+  padding: 0 !important;
+  width: 460px;
+}
+.react-responsive-modal-modal.modal-md-size-draggable {
+  padding: 0 !important;
+  position: absolute;
+  width: 460px;
+  user-select: none;
+  border: none;
+  background-color: unset;
+  box-shadow: none;
+}
+
+.modal-lg-size,
+.modal-lg-size-with-calendar {
+  padding: 0 !important;
+  width: 560px;
+}
+
+.react-responsive-modal-modal.modal-lg-size-draggable {
+  padding: 0 !important;
+  position: absolute;
+  width: 480px;
+  /* width: 560px; */
+  user-select: none;
+  border: none;
+  background-color: unset;
+  box-shadow: none;
+  /* border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
+  overflow: visible !important; */
+}
+
+.draggable-modal-custom {
+  max-height: 85vh;
+  /* max-height: calc(100% - 200px) !important; */
+}
+
+.draggable-modal-md-custom {
+  max-height: 70vh;
+  /* max-height: calc(100% - 200px) !important; */
+}
+
+.modal-image.react-responsive-modal-modal {
+  padding: 0 !important;
+  max-height: calc(100% - 160px);
+  max-width: calc(100% - 160px);
+  border-radius: 0;
+  /* max-height: 100%; */
+  /* min-height: 430px; */
+}
+
+.blur-sm {
+  filter: blur(4px);
+}
+
+/* group add modal */
+.add-group-select-member-modal {
+  height: 342px;
+}
+
+.react-responsive-modal-modal.list-modal {
+  padding: 0 !important;
+  height: 590px;
+  width: 880px;
+  max-width: 880px !important;
+  overflow: unset !important;
+  z-index: 50;
+}
+
+.border-1px-white {
+  border: 1px solid white !important;
+}
+
+/*
+ * * calendar customize
+*/
+.custom-daterange span.rdrWeekDay {
+  width: 25px;
+}
+
+.custom-daterange button.rdrDay {
+  /* width: 40px; */
+  height: 35px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-daterange .rdrMonthAndYearWrapper {
+  justify-content: flex-end;
+}
+
+.custom-daterange .rdrNextPrevButton {
+  margin: 0;
+  margin-bottom: 12px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-daterange .rdrNextPrevButton i {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-daterange .rdrNextButton {
+  margin-right: 12px;
+}
+
+.custom-daterange .rdrNextButton i {
+  margin: 0;
+}
+/* .custom-daterange .rdrN */
+
+.custom-daterange .rdrDays .rdrStartEdge.rdrEndEdge {
+  border-radius: 50%;
+  /* left: 10px;
+  width: 26px;
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+  border-radius: 50%; */
+}
+
+.custom-daterange .rdrDays .rdrStartEdge + span.rdrDayNumber span {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.custom-daterange .rdrDays .rdrEndEdge + span.rdrDayNumber span {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.custom-daterange .rdrDayStartPreview,
+.custom-daterange .rdrDayInPreview,
+.custom-daterange .rdrDayEndPreview {
+  border: none;
+  background-color: unset;
+}
+
+/* .custom-daterange .rdrDayStartPreview {
+  background-color: #007aff;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+*/
+.custom-daterange .rdrDayHovered .rdrDayStartPreview + span.rdrDayNumber,
+.custom-daterange .rdrDayHovered .rdrDayEndPreview + span.rdrDayNumber {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  background-color: #007aff;
+}
+
+.custom-daterange .rdrDayHovered .rdrDayStartPreview + span.rdrDayNumber span,
+.custom-daterange .rdrDayHovered .rdrDayEndPreview + span.rdrDayNumber span {
+  color: white !important;
+  z-index: 50;
+}
+
+.custom-daterange .rdrInRange {
+  /* background-color: unset !important; */
+}
+
+.custom-daterange .rdrInRange + span.rdrDayNumber span {
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 50%;
+  background-color: #007aff !important;
+  vertical-align: middle;
+  color: #fff !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+ * * schedule date picker customize
+ */
+.period-input span.rdrWeekDay {
+  width: 25px;
+}
+
+.period-input .rdrDays .rdrStartEdge.rdrEndEdge {
+  border-radius: 50%;
+}
+
+/* .period-input .rdrDayHovered span.rdrDayNumber {
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 50%;
+  background-color: #007aff14;
+} */
+
+.period-input .rdrDayStartPreview,
+.period-input .rdrDayInPreview,
+.period-input .rdrDayEndPreview {
+  border: none;
+  background-color: unset;
+  /* background-color: #007aff14; */
+}
+
+.period-input button.rdrDay {
+  height: 35px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.period-input button.rdrDay.rdrDayHovered {
+  background-color: unset !important;
+  color: unset !important;
+  border: none !important;
+}
+
+.period-input button.rdrDay.rdrDayHovered span.rdrDayNumber {
+  border: none !important;
+}
+
+.period-input
+  button.rdrDay.rdrDayHovered
+  span.rdrDayStartPreview.rdrDayEndPreview {
+  border: none !important;
+}
+
+.period-input .rdrSelected {
+  background-color: unset !important;
+}
+
+.period-input .rdrSelected + span.rdrDayNumber span {
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 50%;
+  background-color: #007aff !important;
+  vertical-align: middle;
+  color: #fff !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.period-input .rdrSelected + span + span.rdrDayNumber span {
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 50%;
+  background-color: #007aff !important;
+  vertical-align: middle;
+  color: #fff !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.period-input span.rdrDayNumber span {
+  color: #000 !important;
+  background-color: unset;
+}
+
+.period-input .rdrDayPassive span.rdrDayNumber span {
+  /* width: 25px !important; */
+  color: #70757a !important;
+}
+
+.period-input .rdrDayToday span.rdrDayNumber span {
+  /* width: 25px !important; */
+  height: 25px !important;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #a9ceec;
+  color: #fff !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.period-input .rdrDayToday span.rdrDayNumber span {
+  color: #fff !important;
+}
+.period-input .rdrDayToday span.rdrSelected + span.rdrDayNumber span {
+  color: #fff !important;
+}
+
+.period-input
+  .rdrDayToday:not(.rdrDayPassive)
+  .rdrInRange
+  ~ .rdrDayNumber
+  span:after,
+.period-input
+  .rdrDayToday:not(.rdrDayPassive)
+  .rdrStartEdge
+  ~ .rdrDayNumber
+  span:after,
+.rdrDayToday:not(.rdrDayPassive) .rdrEndEdge ~ .rdrDayNumber span:after,
+.period-input
+  .rdrDayToday:not(.rdrDayPassive)
+  .rdrSelected
+  ~ .rdrDayNumber
+  span:after,
+.period-input .rdrDayToday .rdrDayNumber span:after {
+  background-color: unset !important;
+  display: none !important;
+}
+
+.period-input .rdrDayHovered span.rdrDayNumber:after {
+  display: none;
+}
+
+.period-input button.rdrDay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.period-input span.rdrDayNumber span {
+  color: #000;
+}
+
+/* calendar at productivity setting */
+.multiple-date-pick button.rdrDay {
+  width: 44px;
+  height: 50px;
+}
+
+.multiple-date-pick button.rdrDay div.custom-label {
+  position: absolute;
+}
+
+.multiple-date-pick
+  button.rdrDay
+  span.rdrDayNumber
+  div.selected
+  + span.dateSection {
+  color: white !important;
+  z-index: 10;
+}
+
+.multiple-date-pick button.rdrDay div.selected {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eb4d3d;
+}
+
+/* .multiple-date-pick .rdrDayStartPreview.rdrDayEndPreview,
+.multiple-date-pick .rdrDayHovered {
+  border: none;
+} */
+
+/* * background gradient */
+/* login page slider gradient */
+.bg-gradient--auth-blue {
+  background: linear-gradient(154deg, #007aff, #3a65df 49%, #575acf 100%);
+}
+.bg-gradient--auth-red {
+  background: linear-gradient(152deg, #ea8f93 0%, #eb445a 103%);
+}
+.bg-gradient--auth-green {
+  background: linear-gradient(154deg, #68cd66, #3bb2b8 100%);
+}
+
+/* subscription page gradient */
+.bg-gradient--subscription {
+  background: linear-gradient(102deg, #007aff, #3a65df 49%, #575acf);
+}
+
+.bg-gradient--subscription-icon {
+  background: linear-gradient(135deg, #007aff, #3a65df 49%, #575acf);
+}
+
+/* * remove textarea right bottom resize option */
+textarea {
+  resize: none;
+}
+
+.task-detail--date-range div.rdrDateRangeWrapper {
+  padding: 24px !important;
+  border-radius: 8px;
+  border: 0.5px solid #eaeaea;
+  background-color: #fff;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* time picker */
+.rc-time-picker.time-pick {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 4px;
+}
+.rc-time-picker.time-pick input.rc-time-picker-input,
+.rc-time-picker.time-pick input.rc-time-picker-input {
+  display: none;
+}
+.rc-time-picker-clear-icon {
+  display: none;
+}
+
+.react-responsive-modal-modal.modal-md-size-with-calendar {
+  padding: 0 !important;
+  width: 460px;
+  overflow: visible !important;
+}
+.modal-md-size-with-calendar .rdrCalendarWrapper {
+  border-radius: 8px;
+  border: 0.5px solid #eaeaea;
+}
+
+.react-responsive-modal-root.modal-calendar-setting-root {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.react-responsive-modal-modal.modal-calendar-setting {
+  position: absolute;
+  left: -22px;
+  top: 48px;
+  padding: 0 !important;
+  width: 260px;
+  overflow: visible !important;
+}
+
+.react-responsive-modal-root {
+  z-index: 10000 !important;
+}
+
+.react-responsive-modal-overlay.modal-calendar-setting-overlay {
+  background: none;
+}
+
+/* .react-responsive-modal-modal {
+
+} */
+.modal-lg-size-with-calendar .rdrCalendarWrapper {
+  border-radius: 8px;
+  border: 0.5px solid #eaeaea;
+}
+
+/* spinning css loader */
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  left: 200px;
+  top: 250px;
+}
+
+.lds-dual-ring-general {
+  display: inline-block;
+  margin-left: -40px;
+  margin-top: -40px;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after,
+.lds-dual-ring-general:after {
+  content: ' ';
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #00000066;
+  border-color: #00000066 transparent #00000066 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* calendar panel day maginified */
+.abs-center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.abs-xy-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fixed-custom {
+  position: fixed;
+  width: '100%';
+  /* transform: translate(0, -2px); */
+  border-width: 1;
+  border-color: #eaeaea;
+}
+
+.fixed-custom-extended {
+  position: fixed;
+  width: '100%';
+  /* transform: translate(0, -30px); */
+  border-width: 1;
+  border-color: #eaeaea;
+}
+
+/**
+ * * tooltip
+ */
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  /* margin-left: -60px; */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.flexible-modal {
+  position: absolute;
+  z-index: 10000;
+  border: 1px solid #ccc;
+  background: white;
+}
+.flexible-modal-mask {
+  position: fixed;
+  height: 100%;
+  background: rgba(55, 55, 55, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.flexible-modal-resizer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+  margin: 5px;
+  border-bottom: solid 2px #333;
+  border-right: solid 2px #333;
+}
+.flexible-modal-drag-area {
+  background: rgba(22, 22, 333, 0.2);
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: move;
+}
+
+.calender-fix-header {
+  top: -158px;
+}
+
+/**
+ * css for time select
+ */
+.react-datepicker-wrapper {
+  padding: 12px 6px;
+  background-color: #f9f9f9;
+  width: 76px;
+}
+
+.react-datepicker-wrapper:focus {
+  background-color: #eaeaea;
+}
+
+.react-datepicker-wrapper input {
+  width: 71px;
+  background-color: #f9f9f9;
+}
+
+.react-datepicker-wrapper input:focus {
+  outline: none;
+  border: none;
+}
+
+.holidayLabel {
+  overflow: visible !important;
+}
